@@ -25,7 +25,7 @@ public class Main {
 				lowestNum = numArr[i];
 		}
 		
-		secondLowestNum = numArr[0];
+		secondLowestNum = numArr[1];
 		
 		//Find the second lowest number in the array
 		for (int i = 0; i < numArr.length; i++) {
