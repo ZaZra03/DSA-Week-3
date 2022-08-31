@@ -17,26 +17,24 @@ public class Main {
 		}
 		
 		lowestNum = numArr[0];
+		
+		//Find the lowest number in the array
+		for (int i = 0; i < numArr.length; i++) {
+			
+			if (lowestNum > numArr[i])
+				lowestNum = numArr[i];
+		}
+		
 		secondLowestNum = numArr[0];
 		
-		for(int j = 1; j < n; j++) {
-			if(numArr[j] < lowestNum) {
-				lowestNum = numArr[j];
-			}
+		//Find the second lowest number in the array
+		for (int i = 0; i < numArr.length; i++) {
+			if (numArr[i] != lowestNum) {
+				
+				if (secondLowestNum > numArr[i])
+					secondLowestNum = numArr[i];
+			} 
 		}
-		
-		for(int k = 0; k < n; k++) {
-			if(numArr[k] > lowestNum) {
-				for(int l = 0; l < n; l++) {
-					if(numArr[k] < numArr[l]) {
-						secondLowestNum = numArr[k];
-					}
-				}
-			}
-		}
-		
-		System.out.println("\nSecond lowest number is " + secondLowestNum + ".");
-		
+		System.out.println("\nSecond lowest number is " + secondLowestNum);
 	}
-
 }
