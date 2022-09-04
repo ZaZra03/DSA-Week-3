@@ -52,7 +52,7 @@ public class SecondLowestNumberInArray {
 				}
 				secondlargestNumber(numArr, n);
 			} 
-			else System.out.println("Invalit input.");
+			else System.out.println("Invalid input.");
 		} 
 		
 		catch (Exception e){
