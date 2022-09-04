@@ -42,8 +42,7 @@ public class SecondLowestNumberInArray {
 			//Asks the user's prefer size that will be allocated in array
 			System.out.println("How many numbers?");
 			n = Integer.parseInt(in.readLine());
-			
-			if(n <= 2) {
+			if(n > 2) {
 				//Gets the user's input that will be stored in array
 				int[] numArr = new int[n];
 				for(int i = 0; i < n; i++) {
