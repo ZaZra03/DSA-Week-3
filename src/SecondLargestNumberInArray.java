@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class Main {
+public class SecondLargestNumberInArray {
 	public static void main(String[] args) throws IOException {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		int n, lowestNum, secondLowestNum;	
