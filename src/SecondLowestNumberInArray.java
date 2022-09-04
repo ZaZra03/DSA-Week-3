@@ -3,7 +3,7 @@ import java.io.*;
 public class SecondLowestNumberInArray {
 	static int n, lowestNum, secondLowestNum;
 	
-	static void secondlargestNumber (int numArr[], int arrSize) {
+	static void secondlowestNumber (int numArr[], int arrSize) {
 		
 		//Get the lowest and second lowest number
 		if(numArr[0] < numArr[1]) {
@@ -50,7 +50,7 @@ public class SecondLowestNumberInArray {
 					System.out.print("Enter a number: ");
 					numArr[i] = Integer.parseInt(in.readLine());
 				}
-				secondlargestNumber(numArr, n);
+				secondlowestNumber(numArr, n);
 			} 
 			else System.out.println("Invalid input.");
 		} 
