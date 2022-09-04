@@ -59,6 +59,5 @@ public class SecondLowestNumberInArray {
 			System.out.println("Please enter a number.");
 			return;
 		}
-
 	}
 }
