@@ -6,6 +6,7 @@ public class Main {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		int n, lowestNum, secondLowestNum;
 		
+		
 		System.out.println("How many numbers?");
 		n = Integer.parseInt(in.readLine());
 		
@@ -16,25 +17,25 @@ public class Main {
 			numArr[i] = Integer.parseInt(in.readLine());
 		}
 		
-		lowestNum = numArr[0];
+		if(numArr[0] < numArr[1]) {
+			lowestNum = numArr[0];
+			secondLowestNum = numArr[1];
+		} else {
+			lowestNum = numArr[1];
+			secondLowestNum = numArr[0];
+		}
 		
-		//Find the lowest number in the array
-		for (int i = 0; i < numArr.length; i++) {
-			
-			if (lowestNum > numArr[i])
+		for(int i = 2; i < numArr.length; i++) {
+			if(numArr[i] < lowestNum) {
+				secondLowestNum = lowestNum;
 				lowestNum = numArr[i];
+			}
+			else if(numArr[i] < secondLowestNum && numArr[i] > lowestNum) {
+				secondLowestNum = numArr[i];
+			}
 		}
+
+		System.out.println("The second Lowest Number is: " + secondLowestNum);
 		
-		secondLowestNum = numArr[1];
-		
-		//Find the second lowest number in the array
-		for (int i = 0; i < numArr.length; i++) {
-			if (numArr[i] != lowestNum) {
-				
-				if (secondLowestNum > numArr[i])
-					secondLowestNum = numArr[i];
-			} 
-		}
-		System.out.println("\nSecond lowest number is " + secondLowestNum);
 	}
 }
